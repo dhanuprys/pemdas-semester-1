@@ -23,18 +23,19 @@ def kalkulasi_nilai(start: int, end: int):
     """
     output = ""
     total = 0
-    for i in range(start, end + 1):
+    counter = start
+    while counter <= end:
         hasil = 0
-
-        if i % 2 == 0:
-            hasil = i + 3
+        
+        if counter % 2 == 0:
+            hasil = counter + 3
         else:
-            hasil = i + 2
+            hasil = counter + 2
 
-        if i > 1:
+        if counter > 1:
             # Jika perulangan sudah berada pada nomor kedua dan
             # seterusnya maka blok kode dibawah ini akan di-eksekusi
-            if i % 2 == 0:
+            if counter % 2 == 0:
                 output += "+"
                 total += hasil
             else:
@@ -47,6 +48,8 @@ def kalkulasi_nilai(start: int, end: int):
             # maka blok kode ini akan di-eksekusi
             output += str(hasil)
             total += hasil
+
+        counter += 1
     print(output, end=f"={total}\n")
 
 def try_again_prompt() -> bool:
