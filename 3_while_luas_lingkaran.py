@@ -52,8 +52,8 @@ def main():
         # Bertanya apakah user akan mengulang proses atau tidak
         if not try_again_prompt():
             break
-        else:
-            print()
+
+        print()
 
 if __name__ == "__main__":
     main()

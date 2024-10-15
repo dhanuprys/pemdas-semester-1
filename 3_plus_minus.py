@@ -71,8 +71,8 @@ def main():
 
         if not try_again_prompt():
             break
-        else:
-            print()
+
+        print()
     
 
 if __name__ == "__main__":
