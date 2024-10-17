@@ -24,30 +24,20 @@ def kalkulasi_nilai(start: int, end: int):
     output = ""
     total = 0
     counter = start
-    while counter <= end:
-        hasil = 0
-        
-        if counter % 2 == 0:
-            hasil = counter + 3
+    is_continue = True
+    while is_continue:
+        if counter == 1:
+            output += str(counter + 4)
+            total += counter + 4
+        elif counter % 2 == 0:
+            output += f"+{str(counter + 8)}"
+            total += counter + 8
         else:
-            hasil = counter + 2
+            output += f"-{str(counter + 4)}"
+            total -= counter + 4
 
-        if counter > 1:
-            # Jika perulangan sudah berada pada nomor kedua dan
-            # seterusnya maka blok kode dibawah ini akan di-eksekusi
-            if counter % 2 == 0:
-                output += "+"
-                total += hasil
-            else:
-                output += "-"
-                total -= hasil
-
-            output += str(hasil)
-        else:
-            # Jika perulangan masih berada pada nomor pertama
-            # maka blok kode ini akan di-eksekusi
-            output += str(hasil)
-            total += hasil
+        if counter == end:
+            is_continue = False
 
         counter += 1
     print(output, end=f"={total}\n")
