@@ -32,7 +32,7 @@ def try_again_prompt() -> bool:
     Returns:
         bool: True jika jawabannya "y" dan False untuk selain "y"
     """
-    response = input("Apakah anda ingin mengulang proses? (y): ")
+    response = input("Apakah anda ingin mengulang proses? (y/N): ")
     return response.lower() == "y"
 
 def main():
