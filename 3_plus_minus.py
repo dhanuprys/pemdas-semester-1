@@ -70,6 +70,7 @@ def main():
         kalkulasi_nilai(START, END)
 
         if not try_again_prompt():
+            print("Terimakasih telah menggunakan program ini!")
             break
 
         print()
